@@ -74,6 +74,19 @@ export default function Login() {
             </p>
           </div>
 
+          <div style={{ background: 'var(--gray-50)', borderRadius: 10, padding: 16, marginTop: 20 }}>
+            <p style={{ fontSize: 12, color: 'var(--gray-500)', fontWeight: 600, marginBottom: 8 }}>DEMO ACCOUNTS</p>
+            {[
+              { label: 'Admin', email: 'admin@zameen.com', pass: 'admin123' },
+              { label: 'Seller', email: 'seller@zameen.com', pass: 'seller123' },
+              { label: 'Buyer', email: 'buyer@zameen.com', pass: 'buyer123' },
+            ].map(d => (
+              <button key={d.label} onClick={() => setForm({ email: d.email, password: d.pass })}
+                style={{ display: 'block', width: '100%', textAlign: 'left', padding: '6px 8px', borderRadius: 6, border: 'none', background: 'none', fontSize: 13, cursor: 'pointer', color: 'var(--green-700)', fontWeight: 600 }}>
+                {d.label}: {d.email} / {d.pass}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </div>
