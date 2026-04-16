@@ -1,0 +1,12 @@
+node_modules/
+.env
+*.log
+dist/
+build/
+.DS_Store
+venv/
+__pycache__/
+*.pyc
+*.pyo
+zameen_ml_model/*.pkl
+uploads/

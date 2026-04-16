@@ -1,0 +1,15 @@
+{
+  "name": "zameen-fullstack",
+  "version": "1.0.0",
+  "description": "Zameen Smart Property Intelligence Platform",
+  "scripts": {
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm start",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "seed": "cd backend && node scripts/seedFromCSV.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
