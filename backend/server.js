@@ -38,6 +38,7 @@ app.use('/api/properties', require('./routes/properties'));
 app.use('/api/ml', require('./routes/ml'));
 app.use('/api/areas', require('./routes/areas'));
 app.use('/api/investment', require('./routes/investment'));
+app.use('/api/seed', require('./routes/seed'));
 
 // Health check
 app.get('/api/health', (req, res) => res.json({ status: 'ok', message: 'Zameen API running', timestamp: new Date().toISOString() }));
